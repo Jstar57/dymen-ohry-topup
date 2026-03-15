@@ -303,3 +303,109 @@ body {
 .search-wrapper {
     background: #000033 !important;
 }
+--- c:\Users\ACER\Documents\myprojek\Halaman dymen.css
++++ c:\Users\ACER\Documents\myprojek\Halaman dymen.css
+@@ -38,6 +38,7 @@
+     display: flex;
+     gap: 15px;
+     align-items: center;
++    position: relative;
+ }
+ 
+ /* Banner */
+@@ -323,3 +324,25 @@
+ .search-wrapper {
+     background: #000033 !important;
+ }
++
++/* Menu Dropdown Nimpa */
++.dropdown-menu {
++    position: absolute;
++    top: 100%; /* Muncul tepat di bawah ikon */
++    right: 0;
++    width: 160px;
++    background: #252525;
++    border: 1px solid #00665c;
++    border-radius: 8px;
++    display: none; /* Tersembunyi secara default */
++    flex-direction: column;
++    z-index: 9999; /* Pastikan menimpa elemen lain */
++    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
++    overflow: hidden;
++}
++.nav-icons:hover .dropdown-menu { display: flex; }
++.dropdown-menu a {
++    padding: 12px 15px;
++    color: #fff;
++    text-decoration: none;
++    font-size: 0.9rem;
++    border-bottom: 1px solid #333;
++    transition: 0.3s;
++}
++.dropdown-menu a:hover { background: #00665c; }
+/* Kotak menu melayang */
+.menu-nimpa {
+    position: absolute;
+    top: 60px; /* Jarak dari atas (sesuaikan tinggi navbar) */
+    right: 20px; /* Muncul di sisi kanan */
+    background: #222; /* Warna gelap biar masuk tema */
+    border: 1px solid #444;
+    border-radius: 8px;
+    width: 200px;
+    display: none; /* Sembunyi dulu */
+    flex-direction: column;
+    z-index: 9999; /* Pastikan di atas semua elemen */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+/* Link di dalam menu */
+.menu-nimpa a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid #333;
+    transition: 0.2s;
+}
+
+.menu-nimpa a:hover {
+    background: #333;
+    color: #ffcc00;
+}
+
+/* Munculkan menu */
+.menu-nimpa.show {
+    display: flex;
+}
+.item-wide {
+    /* Agar border hanya membungkus konten (tidak memanjang) */
+    display: inline-flex; 
+    align-items: center;
+    gap: 15px;
+
+    /* Border Hijau Toska */
+    border: 2px solid #008080;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+/* Mengubah warna teks Mobile Legends */
+.info h4 {
+    margin: 0;
+    color: #008080; /* Warna Hijau Toska yang sama dengan border */
+    font-family: sans-serif;
+}
+
+.info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+}
+
+/* Opsional: Membuat gambar sedikit lebih rapi */
+.item-wide img {
+    border-radius: 8px;
+    display: block;
+}
